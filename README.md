@@ -49,127 +49,27 @@ Puedes integrar las alertas personalizables en tu proyecto de la siguiente maner
 ```html
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Prueba De Alerts</title>
-  </head>
-  <body>
-    <section class="Container">
-      <h1>Prueba El Alert</h1>
-      <div class="Button-container">
-        <button
-          id="Alert_1"
-          onclick="SetCustomAlert({
-                Alert_Has_Alert: true,
-                Alert_Show_On_Load: false,
-                Alert_type: null,
-                Alert_Title: 'No Imagen',
-                Alert_Text: 'Prueba De Alerta Desde Boton Sin Imagen',
-                Alert_Has_Ok: false,
-                Alert_Has_Cancel: true,
-                Alert_Cancel_Button_text:'Salir',
-                Alert_Has_Other: false,
-                Alert_Other_function_Name: 'NaN',
-                Alert_Has_Time_Up: false,
-                Alert_Time_Up: 0,
-            })"
-        >
-          Alert #1
-        </button>
-        <button
-          id="Alert_2"
-          onclick="SetCustomAlert({
-                Alert_Has_Alert: true,
-                Alert_Show_On_Load: false,
-                Alert_type: 'Success',
-                Alert_Title: 'Success',
-                Alert_Text: 'Prueba De Alerta Desde Boton cun Success',
-                Alert_Has_Ok: false,
-                Alert_Has_Cancel: true,
-                Alert_Cancel_Button_text:'Salir',
-                Alert_Has_Other: false,
-                Alert_Other_function_Name: 'NaN',
-                Alert_Has_Time_Up: false,
-                Alert_Time_Up: 0,
-            })"
-        >
-          Alert #2
-        </button>
-        <button
-          id="Alert_3"
-          onclick="SetCustomAlert({
-                Alert_Has_Alert: true,
-                Alert_Show_On_Load: false,
-                Alert_type: 'Error',
-                Alert_Title: 'Error',
-                Alert_Text: 'Prueba De Alerta Desde Boton Con Error',
-                Alert_Has_Ok: false,
-                Alert_Has_Cancel: true,
-                Alert_Cancel_Button_text:'Salir',
-                Alert_Has_Other: false,
-                Alert_Other_function_Name: 'NaN',
-                Alert_Has_Time_Up: false,
-                Alert_Time_Up: 0,
-            })"
-        >
-          Alert #3
-        </button>
-        <button
-          id="Alert_4"
-          onclick="SetCustomAlert({
-                Alert_Has_Alert: true,
-                Alert_Show_On_Load: false,
-                Alert_type: 'Loading',
-                Alert_Title: 'Loading',
-                Alert_Text: 'Prueba De Alerta Desde Boton Con Loading',
-                Alert_Has_Ok: false,
-                Alert_Has_Cancel: true,
-                Alert_Cancel_Button_text:'Salir',
-                Alert_Has_Other: false,
-                Alert_Other_function_Name: 'NaN',
-                Alert_Has_Time_Up: false,
-                Alert_Time_Up: 0,
-            })"
-        >
-          Alert #4
-        </button>
-        <button
-          id="Alert_5"
-          onclick="SetCustomAlert({
-                Alert_Has_Alert: true,
-                Alert_Show_On_Load: false,
-                Alert_type: 'Advice',
-                Alert_Title: 'Advice',
-                Alert_Text: 'Prueba De Alerta Desde Boton Con Advice',
-                Alert_Has_Ok: false,
-                Alert_Has_Cancel: true,
-                Alert_Cancel_Button_text:'Salir',
-                Alert_Has_Other: false,
-                Alert_Other_function_Name: 'NaN',
-                Alert_Has_Time_Up: false,
-                Alert_Time_Up: 0,
-            })"
-        >
-          Alert #5
-        </button>
-      </div>
-    </section>
+</head>
+<body>
     <script>
-      const CustomAlert = {
-        Alert_Has_Alert: true,
-        Alert_Show_On_Load: true,
-        Alert_type: "Loading",
-        Alert_Title: "Alert De Inico",
-        Alert_Text:
-          "Este es el alert que se ejecuta cada vez que e inicia la vista",
-        Alert_Has_Ok: true,
-        Alert_Ok_Button_text: "Continuar",
-        Alert_Has_Cancel: true,
-        Alert_Cancel_Button_text: "Cancelar",
-        Alert_Has_Other: true,
-        Alert_Other_Button_text: "Funcion",
-        Alert_Other_function: `SetCustomAlert({
+        const CustomAlert = {
+            Alert_Has_Alert: true,
+            Alert_Show_On_Load: true,
+            Alert_type: 'Loading',
+            Alert_Title: "Alert De Inico",
+            Alert_Text: "Este es el alert que se ejecuta cada vez que e inicia la vista",
+            Alert_Has_Ok: true,
+            Alert_Ok_Button_text: "Continuar",
+            Alert_Has_Cancel: true,
+            Alert_Cancel_Button_text: "Cancelar",
+            Alert_Has_Other: true,
+            Alert_Other_Button_text: "Funcion",
+            Alert_Other_function: `SetCustomAlert({
                 Alert_Has_Alert: true,
                 Alert_Show_On_Load: false,
                 Alert_type: 'Advice',
@@ -183,17 +83,21 @@ Puedes integrar las alertas personalizables en tu proyecto de la siguiente maner
                 Alert_Has_Time_Up: false,
                 Alert_Time_Up: 0,
             })`,
-        Alert_Has_Time_Up: false,
-        Alert_Time_Up: 50000,
-      };
+            Alert_Has_Time_Up: false,
+            Alert_Time_Up: 50000,
+        }
     </script>
-    <script src="./js/functions.js"></script>
-  </body>
+    <script src="./alerts/js/functions.js"></script>
+</body>
 </html>
 ````
 
 ##Ejemplo de Configuración
 En el ejemplo proporcionado en el archivo HTML, se muestra cómo puedes configurar las alertas personalizables. Puedes definir propiedades como el tipo de alerta, el título, el texto y la función a ejecutar cuando se pulsa el botón "Other". Además, puedes decidir si la alerta se muestra al cargar la página.
+
+recuerda que la direccion del recurso debe ser en la carpeta raiz guardago en una subcarpeta con nombre alerts
+
+Raiz/alerts/img,css,js
 
 ##Contribuciones
 Si deseas contribuir a este proyecto, siéntete libre de hacerlo. Puedes enviar problemas, solicitudes de extracción y mejoras para ayudar a hacer que las alertas sean aún más personalizables y versátiles.

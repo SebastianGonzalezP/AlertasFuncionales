@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Prueba De Alerts</title>
+</head>
+<body>
+    <section class="Container">
+        <h1>Prueba El Alert</h1>
+        <div class="Button-container">
+            <button id="Alert_1" onclick="SetCustomAlert({
+                Alert_Has_Alert: true,
+                Alert_Show_On_Load: false,
+                Alert_type: null,
+                Alert_Title: 'No Imagen',
+                Alert_Text: 'Prueba De Alerta Desde Boton Sin Imagen',
+                Alert_Has_Ok: false,
+                Alert_Has_Cancel: true,
+                Alert_Cancel_Button_text:'Salir',
+                Alert_Has_Other: false,
+                Alert_Other_function_Name: 'NaN',
+                Alert_Has_Time_Up: false,
+                Alert_Time_Up: 0,
+            })">Alert #1</button>
+            <button id="Alert_2" onclick="SetCustomAlert({
+                Alert_Has_Alert: true,
+                Alert_Show_On_Load: false,
+                Alert_type: 'Success',
+                Alert_Title: 'Success',
+                Alert_Text: 'Prueba De Alerta Desde Boton cun Success',
+                Alert_Has_Ok: false,
+                Alert_Has_Cancel: true,
+                Alert_Cancel_Button_text:'Salir',
+                Alert_Has_Other: false,
+                Alert_Other_function_Name: 'NaN',
+                Alert_Has_Time_Up: false,
+                Alert_Time_Up: 0,
+            })">Alert #2</button>
+            <button id="Alert_3" onclick="SetCustomAlert({
+                Alert_Has_Alert: true,
+                Alert_Show_On_Load: false,
+                Alert_type: 'Error',
+                Alert_Title: 'Error',
+                Alert_Text: 'Prueba De Alerta Desde Boton Con Error',
+                Alert_Has_Ok: false,
+                Alert_Has_Cancel: true,
+                Alert_Cancel_Button_text:'Salir',
+                Alert_Has_Other: false,
+                Alert_Other_function_Name: 'NaN',
+                Alert_Has_Time_Up: false,
+                Alert_Time_Up: 0,
+            })">Alert #3</button>
+            <button id="Alert_4" onclick="SetCustomAlert({
+                Alert_Has_Alert: true,
+                Alert_Show_On_Load: false,
+                Alert_type: 'Loading',
+                Alert_Title: 'Loading',
+                Alert_Text: 'Prueba De Alerta Desde Boton Con Loading',
+                Alert_Has_Ok: false,
+                Alert_Has_Cancel: true,
+                Alert_Cancel_Button_text:'Salir',
+                Alert_Has_Other: false,
+                Alert_Other_function_Name: 'NaN',
+                Alert_Has_Time_Up: false,
+                Alert_Time_Up: 0,
+            })">Alert #4</button>
+            <button id="Alert_5" onclick="SetCustomAlert({
+                Alert_Has_Alert: true,
+                Alert_Show_On_Load: false,
+                Alert_type: 'Advice',
+                Alert_Title: 'Advice',
+                Alert_Text: 'Prueba De Alerta Desde Boton Con Advice',
+                Alert_Has_Ok: false,
+                Alert_Has_Cancel: true,
+                Alert_Cancel_Button_text:'Salir',
+                Alert_Has_Other: false,
+                Alert_Other_function_Name: 'NaN',
+                Alert_Has_Time_Up: false,
+                Alert_Time_Up: 0,
+            })">Alert #5</button>
+        </div>
+    </section>
+    <script>
+        const CustomAlert = {
+            Alert_Has_Alert: true,
+            Alert_Show_On_Load: true,
+            Alert_type: 'Loading',
+            Alert_Title: "Alert De Inico",
+            Alert_Text: "Este es el alert que se ejecuta cada vez que e inicia la vista",
+            Alert_Has_Ok: true,
+            Alert_Ok_Button_text: "Continuar",
+            Alert_Has_Cancel: true,
+            Alert_Cancel_Button_text: "Cancelar",
+            Alert_Has_Other: true,
+            Alert_Other_Button_text: "Funcion",
+            Alert_Other_function: `SetCustomAlert({
+                Alert_Has_Alert: true,
+                Alert_Show_On_Load: false,
+                Alert_type: 'Advice',
+                Alert_Title: 'Advice',
+                Alert_Text: 'Prueba De Alerta Desde Other Button',
+                Alert_Has_Ok: false,
+                Alert_Has_Cancel: true,
+                Alert_Cancel_Button_text:'Salir',
+                Alert_Has_Other: false,
+                Alert_Other_function_Name: 'NaN',
+                Alert_Has_Time_Up: false,
+                Alert_Time_Up: 0,
+            })`,
+            Alert_Has_Time_Up: false,
+            Alert_Time_Up: 50000,
+        }
+    </script>
+    <script src="./alerts/js/functions.js"></script>
+</body>
+</html>

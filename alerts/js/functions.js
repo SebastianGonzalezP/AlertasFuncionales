@@ -37,7 +37,7 @@ const SetCustomAlert = (CustomAlert) => {
 
 document.head.insertAdjacentHTML(
   "beforeend",
-  '<link rel="stylesheet" href="./css/alert.css">'
+  '<link rel="stylesheet" href="./alerts/css/alert.css">'
 );
 
 if (Alert !== null) {
@@ -52,19 +52,19 @@ const CreateAlertCode = () => {
   switch (Alert.Alert_type) {
     case "Error":
       code += `
-            <img id="alert-image" src="./img/Error.gif" alt="Un Simbolo de Equiz de color rojo ">`;
+            <img id="alert-image" src="./alerts/img/Error.gif" alt="Un Simbolo de Equiz de color rojo ">`;
       break;
     case "Success":
       code += `
-            <img id="alert-image" src="./img/Success.gif" alt="Un Simbolo de check de color verde ">`;
+            <img id="alert-image" src="./alerts/img/Success.gif" alt="Un Simbolo de check de color verde ">`;
       break;
     case "Advice":
       code += `
-            <img id="alert-image" src="./img/Advice.gif" alt="Un Simbolo de Peligro de color Amarillo ">`;
+            <img id="alert-image" src="./alerts/img/Advice.gif" alt="Un Simbolo de Peligro de color Amarillo ">`;
       break;
     case "Loading":
       code += `
-            <img id="alert-image" src="./img/Loading.gif" alt="Un Simbolo en forma de circulo girando ">`;
+            <img id="alert-image" src="./alerts/img/Loading.gif" alt="Un Simbolo en forma de circulo girando ">`;
       break;
     default:
       break;
